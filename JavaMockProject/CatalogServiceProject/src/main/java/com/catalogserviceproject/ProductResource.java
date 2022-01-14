@@ -1,5 +1,6 @@
 package com.catalogserviceproject;
 import java.sql.SQLException;
+
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -25,6 +26,18 @@ public class ProductResource {
 			}
 			return null;
 		}
+		
+//		@GET
+//		@Produces(MediaType.APPLICATION_JSON)
+//		public List<Product> listAllProducts(){
+//			ProductList productList=new ProductList();
+//			try {
+//				List<Product> proList=productService.viewAllProducts();
+//				productList.setProducts(proList);
+//			} catch (ClassNotFoundException | SQLException e) {
+//				e.printStackTrace();
+//			}
+//		}
 		
 		
 		@Path("/code/{code}")
