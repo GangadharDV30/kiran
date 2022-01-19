@@ -70,13 +70,13 @@ filter: none;}
 .a2{
 	
 	top: -10px;
-	left: 220px;
+	left: 340px;
 	position: relative;	
 }
 .a3{
 	
 	top: -10px;
-	left: 200px;
+	left: 320px;
 	position: relative;	
 }
 .a3:hover{
@@ -92,7 +92,7 @@ filter: none;}
 	right: 0;
 	margin: 20px;
 	margin-top: 161px;
-    margin-left: -431px;
+    margin-left: -590px;
 	max-width: 350px;
 	padding: 16px;
 	background-color: transparent;
@@ -103,8 +103,8 @@ table,th,td{
 }
 
 table{
-	height:200px;
-	width:250%;
+	height:180px;
+	width:355%;
 	border-collapse:collapse;
 }
 
@@ -128,7 +128,7 @@ body {
 {
     font-size: 10px;
     border: none;
-    padding: 15px 15px;
+    padding: 10px 10px;
     background-color: black;
     color: white;
     border-radius: 3px;
@@ -147,7 +147,7 @@ filter: none;}
    margin:10px;
     transition: transform 1s;
     filter: grayscale(100%);
-    border-radius: 3px;
+     border-radius: 3px;
     border: none;
     text-align: center;
 }

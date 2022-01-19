@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.onlineshoping.bean.Customer;
+import com.onlineshoping.service.CartService;
+import com.onlineshoping.service.CartServiceImpl;
 import com.onlineshoping.service.CustomerService;
 import com.onlineshoping.service.CustomerServiceImpl;
 
@@ -26,12 +28,16 @@ HttpSession session=request.getSession(false);
 		String password=request.getParameter("password");
 		
 		CustomerService customer=new CustomerServiceImpl();
+		CartService cart=new CartServiceImpl();
 		
 		Customer cust=new Customer(name,email,password);
 
 	String message=null;
 		try {
+			
 			if(customer.signingUp(cust)) {
+				
+				cart.createNewCart(name);
 			message="Signup Successfull.. please login and Continue Shopping";
 		}
 		else {
@@ -41,7 +47,7 @@ HttpSession session=request.getSession(false);
 		e.printStackTrace();
 		}
 		session.setAttribute("message", message);
-		RequestDispatcher dispatcher=request.getRequestDispatcher("./signupsuccessfull.jsp");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("./index.jsp");
 		dispatcher.forward(request, response);
 	}
 

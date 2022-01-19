@@ -43,7 +43,7 @@ public class SignIn extends HttpServlet {
 			}
 			}
 			else {
-				response.sendRedirect("./logininfailed.jsp");
+				response.sendRedirect("./index.jsp");
 			}
 		} 
 		catch (ClassNotFoundException | SQLException e) {

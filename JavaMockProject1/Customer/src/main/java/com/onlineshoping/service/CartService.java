@@ -5,10 +5,10 @@ import com.onlineshoping.bean.ItemList;
 
 public interface CartService {
 	public String createNewCart(String userName);
-	public String addItomInCart(Item item);
-	public String addItomsInCart(Item item);
-	public ItemList getItomsFromCart(String userName);
-	public String deleteItomFromCart(Item item);
-	public String deleteItomsFromCart(Item item);
-	public String deleteAllItomsFromCart(String userName);
+	public String addItemInCart(Item item);
+	public String addItemsInCart(Item item);
+	public ItemList getItemsFromCart(String userName);
+	public String deleteItemFromCart(Item item);
+	public String deleteItemsFromCart(Item item);
+	public String deleteAllItemsFromCart(String userName);
 }

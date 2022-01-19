@@ -15,7 +15,7 @@
 <body>
 <nav>
 <img src="Publicis_Sapient_Logo.jpg" alt="add crt Logo" class="logo">
- <ul> <li><a class="a1"> Welcome, ${fn: toUpperCase(sessionScope.customer.customerName)} !</a> </li> <li><a class="a2"> Cart</a> </li><li><a class="a3"> Log Out</a> </li>
+ <ul> <li><a class="a1"> Welcome, ${fn: toUpperCase(sessionScope.customer.customerName)} !</a> </li> <li><a class="a2" href="./mycart"> Cart</a> </li><li><a class="a3"> Log Out</a> </li>
 </ul>
 </nav>
 <div class="bg-img">
@@ -40,13 +40,17 @@
         		 <td>${sessionScope.productlist.getProducts().get(i).getName()}</td>
         		 <td>${sessionScope.productlist.getProducts().get(i).getDescription()}</td>
         		 <td>${sessionScope.productlist.getProducts().get(i).getPrice()}</td>
-        		 <td><button type="submit" class="btn">Add Cart</button></td>
+        		 <td><form action="./addproductincart" method="post">
+									<input type="text" name="item" value="${sessionScope.productlist.getProducts().get(i).getCode()}" hidden=""  >
+									<input type="text" name="quantity" placeholder="1" class="namepass">
+									<input type="submit" value="Add To Cart" class="btn">
+											</form></td>
         		 </tr>
      		 </c:forEach>
 			
 		</table>
+		
 		<br>
-
 	</main>
 </div>
 </div>

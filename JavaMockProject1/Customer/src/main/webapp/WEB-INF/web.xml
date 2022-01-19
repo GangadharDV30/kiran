@@ -45,4 +45,44 @@
     <servlet-name>ViewProduct</servlet-name>
     <url-pattern>/viewproduct</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddProductInCart</display-name>
+    <servlet-name>AddProductInCart</servlet-name>
+    <servlet-class>com.onlineshoping.controllers.AddProductInCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddProductInCart</servlet-name>
+    <url-pattern>/addproductincart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MyCart</display-name>
+    <servlet-name>MyCart</servlet-name>
+    <servlet-class>com.onlineshoping.controllers.MyCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyCart</servlet-name>
+    <url-pattern>/mycart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteAllProductFromCart</display-name>
+    <servlet-name>DeleteAllProductFromCart</servlet-name>
+    <servlet-class>com.onlineshoping.controllers.DeleteAllProductFromCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteAllProductFromCart</servlet-name>
+    <url-pattern>/deleteallproductfromcart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteProductFromCart</display-name>
+    <servlet-name>DeleteProductFromCart</servlet-name>
+    <servlet-class>com.onlineshoping.controllers.DeleteProductFromCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteProductFromCart</servlet-name>
+    <url-pattern>/deleteproductfromcart</url-pattern>
+  </servlet-mapping>
 </web-app>
